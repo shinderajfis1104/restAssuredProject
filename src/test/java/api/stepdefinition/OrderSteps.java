@@ -35,8 +35,8 @@ public class OrderSteps extends StoreEndPoints {
     }
 
 
-    @Given("User creates order with parameters id {int} and petId {int} and quantity {int} shipdate {string} and status {string} and complete {string}")
-    public void userCreatesOrderWithParametersIdAndPetIdAndQuantityShipdateAndStatusAndComplete(int arg0, int arg1, int arg2, String arg3, String arg4, String arg5) {
+    @Given("User creates order with parameters id {string} and petId {string} and quantity {string} shipdate {string} and status {string} and complete {string}")
+    public void userCreatesOrderWithParametersIdAndPetIdAndQuantityShipdateAndStatusAndComplete(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5) {
         Order orderPayload = new Order();
 
         orderPayload.setId(arg0);
@@ -52,8 +52,8 @@ public class OrderSteps extends StoreEndPoints {
         response = StoreEndPoints.createOrder(orderPayload);
     }
 
-    @Given("User fetches the order details by orderId {int}")
-    public void userFetchesTheOrderDetailsByOrderId(int arg0) {
+    @Given("User fetches the order details by orderId {string}")
+    public void userFetchesTheOrderDetailsByOrderId(String arg0) {
         response = StoreEndPoints.getOrder(arg0);
     }
 

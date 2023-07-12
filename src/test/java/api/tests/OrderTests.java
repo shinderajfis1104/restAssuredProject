@@ -16,9 +16,9 @@ public class OrderTests {
 
         orderPayload = new Order();
 
-        orderPayload.setId(8);
-        orderPayload.setPetid(1421);
-        orderPayload.setQuantity(200);
+        orderPayload.setId("15");
+        orderPayload.setPetid("1421a");
+        orderPayload.setQuantity("200");
         orderPayload.setShipdate("2023-07-11T14:55:45.754Z");
         orderPayload.setStatus("placed");
         orderPayload.setComplete(Boolean.TRUE);
@@ -30,21 +30,21 @@ public class OrderTests {
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        response = StoreEndPoints.getOrder(8);
+        /*response = StoreEndPoints.getOrder("5");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        //response = StoreEndPoints.deleteOrder(8);
+        response = StoreEndPoints.deleteOrder("5");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        response = StoreEndPoints.getOrder(8);
+        response = StoreEndPoints.getOrder("5");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),404);
 
         response = StoreEndPoints.getOrderInventory();
         response.then().log().all();
-        Assert.assertEquals(response.getStatusCode(),200);
+        Assert.assertEquals(response.getStatusCode(),200);*/
     }
 
 

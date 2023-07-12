@@ -24,7 +24,7 @@ public class StoreEndPoints {
 
     }
 
-    public static Response getOrder(int orderId){
+    public static Response getOrder(String orderId){
         Response response = given()
                 .accept(ContentType.JSON)
                 .pathParam("orderId",orderId)

@@ -2,23 +2,23 @@ package api.payloads;
 
 public class Order {
 
-    int id;
-    int petid;
-    int quantity;
+    String id;
+    String petid;
+    String quantity;
     String shipdate;
     String status;
     Boolean complete;
 
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
-    public void setPetid(int petid) {
+    public void setPetid(String petid) {
         this.petid = petid;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 
@@ -34,15 +34,15 @@ public class Order {
         this.complete = complete;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public int getPetid() {
+    public String getPetid() {
         return petid;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
