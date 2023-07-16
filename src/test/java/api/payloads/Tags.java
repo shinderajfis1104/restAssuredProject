@@ -1,9 +1,9 @@
 package api.payloads;
 
 public class Tags {
-    int id;
+    String id;
     String name;
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -11,7 +11,7 @@ public class Tags {
         this.name = name;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

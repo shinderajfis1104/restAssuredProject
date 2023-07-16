@@ -4,6 +4,7 @@ import api.endpoints.PetEndPoints;
 import api.payloads.Category;
 import api.payloads.Pet;
 import api.payloads.Tags;
+import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -28,21 +29,21 @@ public class PetTests {
         urls.put("name","ABCDFGHTYH");*/
 
         Category cat1 = new Category();
-        cat1.setId(1524);
+        cat1.setId("1524");
         cat1.setName("GoldenRetriver");
 
         Category cat2 = new Category();
-        cat1.setId(1524);
+        cat1.setId("1524");
         cat1.setName("GoldenRetriver1234");
 
         Tags tag1 = new Tags();
-        tag1.setId(1523);
+        tag1.setId("1523");
         tag1.setName("ABCDEF");
 
         List<Tags> taglist = new ArrayList<>();
         taglist.add(tag1);
 
-        petPayload.setId(1523);
+        petPayload.setId("1623");
         petPayload.setCategory(cat1);
         petPayload.setName("RioG");
         petPayload.setPhotourl(urls);
@@ -50,7 +51,7 @@ public class PetTests {
         petPayload.setStatus("available");
 
         petPayload2 = new Pet();
-        petPayload2.setId(1523);
+        petPayload2.setId("1623");
         petPayload2.setCategory(cat2);
         petPayload2.setName("RioGold");
         petPayload2.setPhotourl(urls);
@@ -66,7 +67,7 @@ public class PetTests {
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        response = PetEndPoints.getPetById("1422");
+        response = PetEndPoints.getPetById("1623");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
@@ -75,28 +76,30 @@ public class PetTests {
         Assert.assertEquals(response.getStatusCode(),200);
         //Assert.assertEquals(response.getBody(),200);
 
-
-        response = PetEndPoints.getPetById("1422");
+        response = PetEndPoints.getPetById("1623");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        response = PetEndPoints.updatePetByForm("1422","Rio_Jagtap","sold");
+        response = PetEndPoints.updatePetByForm("1623","Rio_Jagtap","sold");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
         response = PetEndPoints.getPetByStatus("sold");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
+        JsonPath jsonPathEvaluator = response.jsonPath();
+        ArrayList<String> category = jsonPathEvaluator.get("name");
+        Assert.assertTrue(category.contains("Rio_Jagtap"));
 
-        response = PetEndPoints.getPetById("1422");
+        response = PetEndPoints.getPetById("1623");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        response = PetEndPoints.deletePet("1422");
+        response = PetEndPoints.deletePet("1623");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        response = PetEndPoints.getPetById("1422");
+        response = PetEndPoints.getPetById("1623");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),404);
 

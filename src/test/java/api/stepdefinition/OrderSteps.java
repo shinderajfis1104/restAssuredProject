@@ -2,39 +2,18 @@ package api.stepdefinition;
 
 import api.endpoints.StoreEndPoints;
 import api.payloads.Order;
-import api.utilities.Utilities;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.junit.Assert;
+import org.testng.Assert;
 
-public class OrderSteps extends StoreEndPoints {
+import java.util.HashMap;
 
-    public static Response response;
-    JsonPath js;
-    public static String placeID;
+public class OrderSteps extends CommonSteps{
 
-    @Then("Status code is {int}")
-    public void status_code_is(Integer int1) {
-        System.out.println("Status Code: "+response.statusCode());
-        Assert.assertTrue(response.statusCode()==int1);
-    }
-
-    @Then("{string} in response body is {string}")
-    public void in_response_body_is(String value1, String value2) {
-        System.out.println("Status Code: "+response.statusLine());
-        Assert.assertTrue(response.statusLine().contains(value2));
-    }
-
-    @Then("I retrieve the Place ID")
-    public void i_retrieve_the_place_id() {
-        js = Utilities.rawToJson(response);
-        placeID = js.get("place_id");
-        System.out.println("Place ID: "+placeID);
-    }
-
-
+    JsonPath jsonPathEvaluator;
+    //public Response response;
     @Given("User creates order with parameters id {string} and petId {string} and quantity {string} shipdate {string} and status {string} and complete {string}")
     public void userCreatesOrderWithParametersIdAndPetIdAndQuantityShipdateAndStatusAndComplete(String arg0, String arg1, String arg2, String arg3, String arg4, String arg5) {
         Order orderPayload = new Order();
@@ -74,5 +53,25 @@ public class OrderSteps extends StoreEndPoints {
             //Response res = new Response("This is my message");
         }
 
+    }
+
+    @Given("User fetches the inventory")
+    public void userFetchesTheInventory() {
+        response = StoreEndPoints.getOrderInventory();
+        response.then().log().all();
+    }
+
+    @And("Inventory with Status {string} and count {int} is found")
+    public void inventoryWithStatusAndCountIsFound(String arg0, int arg1) {
+        if(response.statusCode()==200 && arg0 !="") {
+            jsonPathEvaluator = response.jsonPath();
+            //HashMap<String,Integer> status = jsonPathEvaluator.getJsonObject("json");
+
+            //Assert.assertTrue(status.containsKey(arg0));
+            Assert.assertEquals(jsonPathEvaluator.get(arg0),Integer.valueOf(arg1));
+        }
+        else {
+            System.out.println("No Info");
+        }
     }
 }

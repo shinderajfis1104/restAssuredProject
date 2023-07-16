@@ -30,21 +30,21 @@ public class OrderTests {
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        /*response = StoreEndPoints.getOrder("5");
+        response = StoreEndPoints.getOrder("15");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        response = StoreEndPoints.deleteOrder("5");
+        response = StoreEndPoints.deleteOrder("15");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),200);
 
-        response = StoreEndPoints.getOrder("5");
+        response = StoreEndPoints.getOrder("15");
         response.then().log().all();
         Assert.assertEquals(response.getStatusCode(),404);
 
         response = StoreEndPoints.getOrderInventory();
         response.then().log().all();
-        Assert.assertEquals(response.getStatusCode(),200);*/
+        Assert.assertEquals(response.getStatusCode(),200);
     }
 
 

@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-12T13:33:10.164Z",
+        "start_timestamp": "2023-07-16T12:13:51.920Z",
         "line": 17,
         "name": "Create Pet Order",
         "description": "",
@@ -50,7 +50,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-07-12T13:33:10.348Z",
+        "start_timestamp": "2023-07-16T12:13:52.071Z",
         "line": 18,
         "name": "Create Pet Order",
         "description": "",
@@ -69,7 +69,7 @@
           },
           {
             "result": {
-              "duration": 2000000,
+              "duration": 1000000,
               "status": "skipped"
             },
             "line": 13,
@@ -106,6 +106,120 @@
     "tags": [
       {
         "name": "@Order_Operations",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2023-07-16T12:13:52.090Z",
+        "line": 17,
+        "name": "Create Pet Order",
+        "description": "",
+        "id": "test-add-and-delete-place-of-google-map;create-pet-order;;2",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "User creates order with parameters id 5 and petId 1424 and quantity 300 shipdate \"2023-07-11T14:55:45.754Z\" and status \"placed\" and complete \"True\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Pet_Operations"
+          },
+          {
+            "name": "@Create_Order2"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2023-07-16T12:13:52.117Z",
+        "line": 18,
+        "name": "Create Pet Order",
+        "description": "",
+        "id": "test-add-and-delete-place-of-google-map;create-pet-order;;3",
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 12,
+            "name": "User creates order with parameters id 8 and petId 1425 and quantity 500 shipdate \"2023-07-12T14:55:45.754Z\" and status \"pending\" and complete \"False\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 13,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 14,
+            "name": "\"status\" in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Pet_Operations"
+          },
+          {
+            "name": "@Create_Order2"
+          }
+        ]
+      }
+    ],
+    "name": "Test Add and Delete place of google map",
+    "description": "",
+    "id": "test-add-and-delete-place-of-google-map",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/api/features/Pet_CRUD.feature",
+    "tags": [
+      {
+        "name": "@Pet_Operations",
         "type": "Tag",
         "location": {
           "line": 1,

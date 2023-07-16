@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Pet {
 
-    int id;
+    String id;
     Category category;
     String name;
     List<String> photoUrls= new ArrayList<>();;
@@ -13,7 +13,7 @@ public class Pet {
     List<Tags> tags;
     String status;
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -41,7 +41,7 @@ public class Pet {
         this.status = status;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
