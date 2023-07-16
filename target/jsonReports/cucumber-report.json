@@ -3,11 +3,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-16T12:13:51.920Z",
-        "line": 17,
-        "name": "Create Pet Order",
+        "start_timestamp": "2023-07-16T21:09:18.628Z",
+        "line": 60,
+        "name": "Fetch Inventory",
         "description": "",
-        "id": "test-add-and-delete-place-of-google-map;create-pet-order;;2",
+        "id": "test-add-and-delete-place-of-google-map;fetch-inventory;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
@@ -15,8 +15,8 @@
             "result": {
               "status": "undefined"
             },
-            "line": 12,
-            "name": "User creates order with parameters id 5 and petId 1424 and quantity 300 shipdate \"2023-07-11T14:55:45.754Z\" and status \"placed\" and complete \"True\"",
+            "line": 54,
+            "name": "User fetches the inventory",
             "match": {},
             "keyword": "Given "
           },
@@ -24,18 +24,27 @@
             "result": {
               "status": "skipped"
             },
-            "line": 13,
+            "line": 55,
             "name": "Status code is 200",
             "match": {},
             "keyword": "Then "
           },
           {
             "result": {
+              "status": "skipped"
+            },
+            "line": 56,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
               "duration": 1000000,
               "status": "skipped"
             },
-            "line": 14,
-            "name": "\"status\" in response body is \"OK\"",
+            "line": 57,
+            "name": "Inventory with Status \"new\" and count 1 is found",
             "match": {},
             "keyword": "And "
           }
@@ -45,16 +54,19 @@
             "name": "@Order_Operations"
           },
           {
-            "name": "@Create_Order2"
+            "name": "@Fetch_Inventory"
+          },
+          {
+            "name": "@Smoke"
           }
         ]
       },
       {
-        "start_timestamp": "2023-07-16T12:13:52.071Z",
-        "line": 18,
-        "name": "Create Pet Order",
+        "start_timestamp": "2023-07-16T21:09:18.742Z",
+        "line": 78,
+        "name": "CRUD Pet Order",
         "description": "",
-        "id": "test-add-and-delete-place-of-google-map;create-pet-order;;3",
+        "id": "test-add-and-delete-place-of-google-map;crud-pet-order;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
@@ -62,17 +74,71 @@
             "result": {
               "status": "undefined"
             },
-            "line": 12,
-            "name": "User creates order with parameters id 8 and petId 1425 and quantity 500 shipdate \"2023-07-12T14:55:45.754Z\" and status \"pending\" and complete \"False\"",
+            "line": 64,
+            "name": "User creates order with parameters id \"5\" and petId \"1424\" and quantity \"300\" shipdate \"2023-07-11T14:55:45.754Z\" and status \"placed\" and complete \"True\"",
             "match": {},
             "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 65,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 66,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
           },
           {
             "result": {
               "duration": 1000000,
               "status": "skipped"
             },
-            "line": 13,
+            "line": 67,
+            "name": "User fetches the order details by orderId \"5\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 68,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 69,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 70,
+            "name": "User deletes the order by orderId \"5\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 71,
             "name": "Status code is 200",
             "match": {},
             "keyword": "Then "
@@ -82,8 +148,36 @@
               "duration": 1000000,
               "status": "skipped"
             },
-            "line": 14,
-            "name": "\"status\" in response body is \"OK\"",
+            "line": 72,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 73,
+            "name": "User fetches the order details by orderId \"5\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 74,
+            "name": "Status code is 404",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 75,
+            "name": "Status in response body is \"Not Found\"",
             "match": {},
             "keyword": "And "
           }
@@ -93,7 +187,10 @@
             "name": "@Order_Operations"
           },
           {
-            "name": "@Create_Order2"
+            "name": "@CRUD_Order"
+          },
+          {
+            "name": "@Smoke"
           }
         ]
       }
@@ -102,7 +199,7 @@
     "description": "",
     "id": "test-add-and-delete-place-of-google-map",
     "keyword": "Feature",
-    "uri": "file:src/test/java/api/features/Order_CRUD.feature",
+    "uri": "file:src/test/java/api/features/Order_Operations.feature",
     "tags": [
       {
         "name": "@Order_Operations",
@@ -118,11 +215,11 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-16T12:13:52.090Z",
-        "line": 17,
-        "name": "Create Pet Order",
+        "start_timestamp": "2023-07-16T21:09:18.779Z",
+        "line": 148,
+        "name": "CRUD Pet",
         "description": "",
-        "id": "test-add-and-delete-place-of-google-map;create-pet-order;;2",
+        "id": "test-add-and-delete-place-of-google-map;crud-pet;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
@@ -130,8 +227,99 @@
             "result": {
               "status": "undefined"
             },
-            "line": 12,
-            "name": "User creates order with parameters id 5 and petId 1424 and quantity 300 shipdate \"2023-07-11T14:55:45.754Z\" and status \"placed\" and complete \"True\"",
+            "line": 118,
+            "name": "User creates the pet by with Pet Id \"24\" and Pet Name \"RahulB\" and Pet Status \"sold\" and Photo URL \"ABC\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 119,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 120,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 121,
+            "name": "User fetches the pet details by Pet Id \"24\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 122,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 123,
+            "name": "Pet with name \"RahulB\" is found",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 124,
+            "name": "Pet with status \"sold\" is found",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 125,
+            "name": "User updates the pet details by form with Pet Id \"24\" and Pet Name \"RahulR\" and Pet Status \"pending\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "skipped"
+            },
+            "line": 126,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 127,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 128,
+            "name": "User fetches the pet details by Pet Id \"24\"",
             "match": {},
             "keyword": "Given "
           },
@@ -140,46 +328,36 @@
               "duration": 1000000,
               "status": "skipped"
             },
-            "line": 13,
+            "line": 129,
             "name": "Status code is 200",
             "match": {},
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 2000000,
               "status": "skipped"
             },
-            "line": 14,
-            "name": "\"status\" in response body is \"OK\"",
+            "line": 130,
+            "name": "Pet with name \"RahulR\" is found",
             "match": {},
             "keyword": "And "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@Pet_Operations"
           },
           {
-            "name": "@Create_Order2"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2023-07-16T12:13:52.117Z",
-        "line": 18,
-        "name": "Create Pet Order",
-        "description": "",
-        "id": "test-add-and-delete-place-of-google-map;create-pet-order;;3",
-        "type": "scenario",
-        "keyword": "Scenario Outline",
-        "steps": [
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 131,
+            "name": "Pet with status \"pending\" is found",
+            "match": {},
+            "keyword": "And "
+          },
           {
             "result": {
-              "status": "undefined"
+              "status": "skipped"
             },
-            "line": 12,
-            "name": "User creates order with parameters id 8 and petId 1425 and quantity 500 shipdate \"2023-07-12T14:55:45.754Z\" and status \"pending\" and complete \"False\"",
+            "line": 132,
+            "name": "User updates the pet by with Pet Id \"24\" and Pet Name \"RahulB\" and Pet Status \"sold\" and Photo URL \"ABC\"",
             "match": {},
             "keyword": "Given "
           },
@@ -187,7 +365,7 @@
             "result": {
               "status": "skipped"
             },
-            "line": 13,
+            "line": 133,
             "name": "Status code is 200",
             "match": {},
             "keyword": "Then "
@@ -196,8 +374,109 @@
             "result": {
               "status": "skipped"
             },
-            "line": 14,
-            "name": "\"status\" in response body is \"OK\"",
+            "line": 134,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 135,
+            "name": "User fetches the pet details by Pet Id \"24\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 136,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 137,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 138,
+            "name": "Pet with name \"RahulB\" is found",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 139,
+            "name": "Pet with status \"sold\" is found",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 140,
+            "name": "User deletes the pet by Id \"24\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 141,
+            "name": "Status code is 200",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 142,
+            "name": "Status in response body is \"OK\"",
+            "match": {},
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "skipped"
+            },
+            "line": 143,
+            "name": "User fetches the pet details by Pet Id \"24\"",
+            "match": {},
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 144,
+            "name": "Status code is 404",
+            "match": {},
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 145,
+            "name": "Status in response body is \"Not Found\"",
             "match": {},
             "keyword": "And "
           }
@@ -207,7 +486,10 @@
             "name": "@Pet_Operations"
           },
           {
-            "name": "@Create_Order2"
+            "name": "@CRUD_Pet"
+          },
+          {
+            "name": "@Smoke"
           }
         ]
       }
@@ -216,7 +498,7 @@
     "description": "",
     "id": "test-add-and-delete-place-of-google-map",
     "keyword": "Feature",
-    "uri": "file:src/test/java/api/features/Pet_CRUD.feature",
+    "uri": "file:src/test/java/api/features/Pet_Operations.feature",
     "tags": [
       {
         "name": "@Pet_Operations",

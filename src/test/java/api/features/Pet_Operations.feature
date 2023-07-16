@@ -112,3 +112,37 @@ Feature: Test Add and Delete place of google map
 			|23| 200  | OK |
 			|219| 404  | Not Found |
 			|219a| 404  | Not Found |
+
+	@CRUD_Pet @Smoke
+	Scenario Outline: CRUD Pet
+		Given User creates the pet by with Pet Id "<Id>" and Pet Name "<PetName>" and Pet Status "<PetStatus>" and Photo URL "<PhotoURL>"
+		Then Status code is <StatusCode>
+		And Status in response body is "<StatusLine>"
+		Given User fetches the pet details by Pet Id "<Id>"
+		Then Status code is <StatusCode>
+		And Pet with name "<PetName>" is found
+		And Pet with status "<PetStatus>" is found
+		Given User updates the pet details by form with Pet Id "<Id>" and Pet Name "<PetName2>" and Pet Status "<PetStatus2>"
+		Then Status code is <StatusCode>
+		And Status in response body is "<StatusLine>"
+		Given User fetches the pet details by Pet Id "<Id>"
+		Then Status code is <StatusCode>
+		And Pet with name "<PetName2>" is found
+		And Pet with status "<PetStatus2>" is found
+		Given User updates the pet by with Pet Id "<Id>" and Pet Name "<PetName>" and Pet Status "<PetStatus>" and Photo URL "<PhotoURL>"
+		Then Status code is <StatusCode>
+		And Status in response body is "<StatusLine>"
+		Given User fetches the pet details by Pet Id "<Id>"
+		Then Status code is <StatusCode>
+		And Status in response body is "<StatusLine>"
+		And Pet with name "<PetName>" is found
+		And Pet with status "<PetStatus>" is found
+		Given User deletes the pet by Id "<Id>"
+		Then Status code is <StatusCode>
+		And Status in response body is "<StatusLine>"
+		Given User fetches the pet details by Pet Id "<Id>"
+		Then Status code is <StatusCode2>
+		And Status in response body is "<StatusLine2>"
+		Examples:
+			| Id|PetName|PetStatus| StatusCode |StatusLine|PhotoURL|PetName2|PetStatus2|StatusCode2 |StatusLine2|
+			| 24 |RahulB|sold| 200  | OK|ABC|RahulR|pending|404|Not Found|

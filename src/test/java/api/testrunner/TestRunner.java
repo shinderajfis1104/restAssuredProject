@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
 		glue={"src/test/java/api/stepdefinition"},
 		dryRun = false,
 		monochrome = true,
-		tags = "@Create_Order2",
+		tags = "@Smoke",
 		plugin = {"pretty","html:target/cucumber-reports","json:target/jsonReports/cucumber-report.json"
 				},
 		publish = true
