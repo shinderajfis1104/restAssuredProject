@@ -3,7 +3,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-16T21:09:18.628Z",
+        "start_timestamp": "2023-07-17T07:16:50.722Z",
         "line": 60,
         "name": "Fetch Inventory",
         "description": "",
@@ -13,39 +13,71 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 1000000000,
+              "status": "passed"
             },
             "line": 54,
             "name": "User fetches the inventory",
-            "match": {},
+            "match": {
+              "location": "api.stepdefinition.OrderSteps.userFetchesTheInventory()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 55,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 56,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "error_message": "java.lang.AssertionError: expected [1] but found [null]\r\n\tat org.testng.Assert.fail(Assert.java:99)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:140)\r\n\tat org.testng.Assert.assertEquals(Assert.java:122)\r\n\tat org.testng.Assert.assertEquals(Assert.java:617)\r\n\tat api.stepdefinition.OrderSteps.inventoryWithStatusAndCountIsFound(OrderSteps.java:71)\r\n\tat ✽.Inventory with Status \"new\" and count 1 is found(file:///E:/apiAutomation/restAssuredProject/src/test/java/api/features/Order_Operations.feature:57)\r\n",
+              "duration": 16000000,
+              "status": "failed"
             },
             "line": 57,
             "name": "Inventory with Status \"new\" and count 1 is found",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"new\"",
+                  "offset": 22
+                },
+                {
+                  "val": "1",
+                  "offset": 38
+                }
+              ],
+              "location": "api.stepdefinition.OrderSteps.inventoryWithStatusAndCountIsFound(java.lang.String,int)"
+            },
             "keyword": "And "
           }
         ],
@@ -62,7 +94,7 @@
         ]
       },
       {
-        "start_timestamp": "2023-07-16T21:09:18.742Z",
+        "start_timestamp": "2023-07-17T07:16:51.874Z",
         "line": 78,
         "name": "CRUD Pet Order",
         "description": "",
@@ -72,113 +104,232 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 1169000000,
+              "status": "passed"
             },
             "line": 64,
             "name": "User creates order with parameters id \"5\" and petId \"1424\" and quantity \"300\" shipdate \"2023-07-11T14:55:45.754Z\" and status \"placed\" and complete \"True\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 38
+                },
+                {
+                  "val": "\"1424\"",
+                  "offset": 52
+                },
+                {
+                  "val": "\"300\"",
+                  "offset": 72
+                },
+                {
+                  "val": "\"2023-07-11T14:55:45.754Z\"",
+                  "offset": 87
+                },
+                {
+                  "val": "\"placed\"",
+                  "offset": 125
+                },
+                {
+                  "val": "\"True\"",
+                  "offset": 147
+                }
+              ],
+              "location": "api.stepdefinition.OrderSteps.userCreatesOrderWithParametersIdAndPetIdAndQuantityShipdateAndStatusAndComplete(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 65,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 66,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 1024000000,
+              "status": "passed"
             },
             "line": 67,
             "name": "User fetches the order details by orderId \"5\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 42
+                }
+              ],
+              "location": "api.stepdefinition.OrderSteps.userFetchesTheOrderDetailsByOrderId(java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 2000000,
+              "status": "passed"
             },
             "line": 68,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 69,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 913000000,
+              "status": "passed"
             },
             "line": 70,
             "name": "User deletes the order by orderId \"5\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 34
+                }
+              ],
+              "location": "api.stepdefinition.OrderSteps.userDeletesTheOrderByOrderId(java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 4000000,
+              "status": "passed"
             },
             "line": 71,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 72,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1021000000,
+              "status": "passed"
             },
             "line": 73,
             "name": "User fetches the order details by orderId \"5\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"5\"",
+                  "offset": 42
+                }
+              ],
+              "location": "api.stepdefinition.OrderSteps.userFetchesTheOrderDetailsByOrderId(java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 74,
             "name": "Status code is 404",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 75,
             "name": "Status in response body is \"Not Found\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Not Found\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           }
         ],
@@ -215,7 +366,7 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-16T21:09:18.779Z",
+        "start_timestamp": "2023-07-17T07:16:56.028Z",
         "line": 148,
         "name": "CRUD Pet",
         "description": "",
@@ -225,259 +376,525 @@
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 1203000000,
+              "status": "passed"
             },
             "line": 118,
             "name": "User creates the pet by with Pet Id \"24\" and Pet Name \"RahulB\" and Pet Status \"sold\" and Photo URL \"ABC\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"RahulB\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"sold\"",
+                  "offset": 78
+                },
+                {
+                  "val": "\"ABC\"",
+                  "offset": 99
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.userCreatesThePetByWithPetIdAndPetNameAndPetStatusAndPhotoURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 119,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 120,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 921000000,
+              "status": "passed"
             },
             "line": 121,
             "name": "User fetches the pet details by Pet Id \"24\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24\"",
+                  "offset": 39
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.userFetchesThePetDetailsByPetId(java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 122,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 13000000,
+              "status": "passed"
             },
             "line": 123,
             "name": "Pet with name \"RahulB\" is found",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"RahulB\"",
+                  "offset": 14
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.petWithNameIsFound(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 34000000,
+              "status": "passed"
             },
             "line": 124,
             "name": "Pet with status \"sold\" is found",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sold\"",
+                  "offset": 16
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.petWithStatusIsFoundInTheList(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 966000000,
+              "status": "passed"
             },
             "line": 125,
             "name": "User updates the pet details by form with Pet Id \"24\" and Pet Name \"RahulR\" and Pet Status \"pending\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24\"",
+                  "offset": 49
+                },
+                {
+                  "val": "\"RahulR\"",
+                  "offset": 67
+                },
+                {
+                  "val": "\"pending\"",
+                  "offset": 91
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.userUpdatesThePetDetailsByFormWithPetIdAndPetNameAndPetStatus(java.lang.String,java.lang.String,java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 2000000,
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 126,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 127,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 818000000,
+              "status": "passed"
             },
             "line": 128,
             "name": "User fetches the pet details by Pet Id \"24\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24\"",
+                  "offset": 39
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.userFetchesThePetDetailsByPetId(java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 129,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 15000000,
+              "status": "passed"
             },
             "line": 130,
             "name": "Pet with name \"RahulR\" is found",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"RahulR\"",
+                  "offset": 14
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.petWithNameIsFound(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 12000000,
+              "status": "passed"
             },
             "line": 131,
             "name": "Pet with status \"pending\" is found",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"pending\"",
+                  "offset": 16
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.petWithStatusIsFoundInTheList(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 990000000,
+              "status": "passed"
             },
             "line": 132,
             "name": "User updates the pet by with Pet Id \"24\" and Pet Name \"RahulB\" and Pet Status \"sold\" and Photo URL \"ABC\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24\"",
+                  "offset": 36
+                },
+                {
+                  "val": "\"RahulB\"",
+                  "offset": 54
+                },
+                {
+                  "val": "\"sold\"",
+                  "offset": 78
+                },
+                {
+                  "val": "\"ABC\"",
+                  "offset": 99
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.userUpdatesThePetByWithPetIdAndPetNameAndPetStatusAndPhotoURL(java.lang.String,java.lang.String,java.lang.String,java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 4000000,
+              "status": "passed"
             },
             "line": 133,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 134,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 1226000000,
+              "status": "passed"
             },
             "line": 135,
             "name": "User fetches the pet details by Pet Id \"24\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24\"",
+                  "offset": 39
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.userFetchesThePetDetailsByPetId(java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 136,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 137,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 12000000,
+              "status": "passed"
             },
             "line": 138,
             "name": "Pet with name \"RahulB\" is found",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"RahulB\"",
+                  "offset": 14
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.petWithNameIsFound(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 12000000,
+              "status": "passed"
             },
             "line": 139,
             "name": "Pet with status \"sold\" is found",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sold\"",
+                  "offset": 16
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.petWithStatusIsFoundInTheList(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "status": "skipped"
+              "duration": 897000000,
+              "status": "passed"
             },
             "line": 140,
             "name": "User deletes the pet by Id \"24\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.userDeletesThePetById(java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 141,
             "name": "Status code is 200",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "200",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 142,
             "name": "Status in response body is \"OK\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"OK\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 1000000,
-              "status": "skipped"
+              "duration": 1032000000,
+              "status": "passed"
             },
             "line": 143,
             "name": "User fetches the pet details by Pet Id \"24\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"24\"",
+                  "offset": 39
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.userFetchesThePetDetailsByPetId(java.lang.String)"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 144,
             "name": "Status code is 404",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "404",
+                  "offset": 15
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_code_is(java.lang.Integer)"
+            },
             "keyword": "Then "
           },
           {
             "result": {
-              "status": "skipped"
+              "status": "passed"
             },
             "line": 145,
             "name": "Status in response body is \"Not Found\"",
-            "match": {},
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Not Found\"",
+                  "offset": 27
+                }
+              ],
+              "location": "api.stepdefinition.PetSteps.status_in_response_body_is(java.lang.String)"
+            },
             "keyword": "And "
           }
         ],

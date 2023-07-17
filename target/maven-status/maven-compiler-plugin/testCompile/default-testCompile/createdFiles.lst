@@ -5,6 +5,7 @@ api\tests\PetTests.class
 api\payloads\Order.class
 api\utilities\Utilities.class
 api\endpoints\StoreEndPoints.class
+api\stepdefinition\CommonSteps.class
 api\stepdefinition\PetSteps.class
 api\stepdefinition\OrderSteps.class
 api\payloads\Pet.class

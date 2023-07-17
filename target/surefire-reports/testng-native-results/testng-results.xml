@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Surefire suite" duration-ms="16553" started-at="2023-07-17T09:16:32 CEST" finished-at="2023-07-17T09:16:49 CEST">
+    <groups>
+    </groups>
+    <test name="Surefire test" duration-ms="16553" started-at="2023-07-17T09:16:32 CEST" finished-at="2023-07-17T09:16:49 CEST">
+      <class name="api.tests.PetTests">
+        <test-method status="PASS" signature="setuppaylod()[pri:0, instance:api.tests.PetTests@587d1d39]" name="setuppaylod" is-config="true" duration-ms="2" started-at="2023-07-17T09:16:40 CEST" finished-at="2023-07-17T09:16:40 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setuppaylod -->
+        <test-method status="PASS" signature="testPet()[pri:0, instance:api.tests.PetTests@587d1d39]" name="testPet" duration-ms="9408" started-at="2023-07-17T09:16:40 CEST" finished-at="2023-07-17T09:16:49 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPet -->
+      </class> <!-- api.tests.PetTests -->
+      <class name="api.tests.OrderTests">
+        <test-method status="PASS" signature="setuppaylod()[pri:0, instance:api.tests.OrderTests@27808f31]" name="setuppaylod" is-config="true" duration-ms="8" started-at="2023-07-17T09:16:32 CEST" finished-at="2023-07-17T09:16:32 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setuppaylod -->
+        <test-method status="PASS" signature="testOrder()[pri:0, instance:api.tests.OrderTests@27808f31]" name="testOrder" duration-ms="7104" started-at="2023-07-17T09:16:32 CEST" finished-at="2023-07-17T09:16:40 CEST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testOrder -->
+      </class> <!-- api.tests.OrderTests -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
