@@ -3,17 +3,17 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-17T07:16:50.722Z",
+        "start_timestamp": "2023-07-17T12:56:31.312Z",
         "line": 60,
         "name": "Fetch Inventory",
         "description": "",
-        "id": "test-add-and-delete-place-of-google-map;fetch-inventory;;2",
+        "id": "test-for-store-module;fetch-inventory;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1000000000,
+              "duration": 1310000000,
               "status": "passed"
             },
             "line": 54,
@@ -25,6 +25,7 @@
           },
           {
             "result": {
+              "duration": 4000000,
               "status": "passed"
             },
             "line": 55,
@@ -60,7 +61,7 @@
           {
             "result": {
               "error_message": "java.lang.AssertionError: expected [1] but found [null]\r\n\tat org.testng.Assert.fail(Assert.java:99)\r\n\tat org.testng.Assert.failNotEquals(Assert.java:1037)\r\n\tat org.testng.Assert.assertEqualsImpl(Assert.java:140)\r\n\tat org.testng.Assert.assertEquals(Assert.java:122)\r\n\tat org.testng.Assert.assertEquals(Assert.java:617)\r\n\tat api.stepdefinition.OrderSteps.inventoryWithStatusAndCountIsFound(OrderSteps.java:71)\r\n\tat ✽.Inventory with Status \"new\" and count 1 is found(file:///E:/apiAutomation/restAssuredProject/src/test/java/api/features/Order_Operations.feature:57)\r\n",
-              "duration": 16000000,
+              "duration": 28000000,
               "status": "failed"
             },
             "line": 57,
@@ -94,17 +95,17 @@
         ]
       },
       {
-        "start_timestamp": "2023-07-17T07:16:51.874Z",
+        "start_timestamp": "2023-07-17T12:56:32.796Z",
         "line": 78,
         "name": "CRUD Pet Order",
         "description": "",
-        "id": "test-add-and-delete-place-of-google-map;crud-pet-order;;2",
+        "id": "test-for-store-module;crud-pet-order;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1169000000,
+              "duration": 1173000000,
               "status": "passed"
             },
             "line": 64,
@@ -176,7 +177,7 @@
           },
           {
             "result": {
-              "duration": 1024000000,
+              "duration": 1115000000,
               "status": "passed"
             },
             "line": 67,
@@ -194,7 +195,6 @@
           },
           {
             "result": {
-              "duration": 2000000,
               "status": "passed"
             },
             "line": 68,
@@ -229,7 +229,7 @@
           },
           {
             "result": {
-              "duration": 913000000,
+              "duration": 1268000000,
               "status": "passed"
             },
             "line": 70,
@@ -247,7 +247,7 @@
           },
           {
             "result": {
-              "duration": 4000000,
+              "duration": 5000000,
               "status": "passed"
             },
             "line": 71,
@@ -282,7 +282,7 @@
           },
           {
             "result": {
-              "duration": 1021000000,
+              "duration": 1072000000,
               "status": "passed"
             },
             "line": 73,
@@ -346,9 +346,9 @@
         ]
       }
     ],
-    "name": "Test Add and Delete place of google map",
+    "name": "Test for Store Module",
     "description": "",
-    "id": "test-add-and-delete-place-of-google-map",
+    "id": "test-for-store-module",
     "keyword": "Feature",
     "uri": "file:src/test/java/api/features/Order_Operations.feature",
     "tags": [
@@ -366,17 +366,17 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2023-07-17T07:16:56.028Z",
+        "start_timestamp": "2023-07-17T12:56:37.461Z",
         "line": 148,
         "name": "CRUD Pet",
         "description": "",
-        "id": "test-add-and-delete-place-of-google-map;crud-pet;;2",
+        "id": "tests-for-pet-module;crud-pet;;2",
         "type": "scenario",
         "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 1203000000,
+              "duration": 1403000000,
               "status": "passed"
             },
             "line": 118,
@@ -440,7 +440,7 @@
           },
           {
             "result": {
-              "duration": 921000000,
+              "duration": 1641000000,
               "status": "passed"
             },
             "line": 121,
@@ -475,7 +475,7 @@
           },
           {
             "result": {
-              "duration": 13000000,
+              "duration": 19000000,
               "status": "passed"
             },
             "line": 123,
@@ -493,7 +493,7 @@
           },
           {
             "result": {
-              "duration": 34000000,
+              "duration": 18000000,
               "status": "passed"
             },
             "line": 124,
@@ -511,7 +511,7 @@
           },
           {
             "result": {
-              "duration": 966000000,
+              "duration": 1796000000,
               "status": "passed"
             },
             "line": 125,
@@ -571,7 +571,7 @@
           },
           {
             "result": {
-              "duration": 818000000,
+              "duration": 920000000,
               "status": "passed"
             },
             "line": 128,
@@ -606,7 +606,7 @@
           },
           {
             "result": {
-              "duration": 15000000,
+              "duration": 20000000,
               "status": "passed"
             },
             "line": 130,
@@ -624,7 +624,7 @@
           },
           {
             "result": {
-              "duration": 12000000,
+              "duration": 20000000,
               "status": "passed"
             },
             "line": 131,
@@ -642,7 +642,7 @@
           },
           {
             "result": {
-              "duration": 990000000,
+              "duration": 1289000000,
               "status": "passed"
             },
             "line": 132,
@@ -672,7 +672,6 @@
           },
           {
             "result": {
-              "duration": 4000000,
               "status": "passed"
             },
             "line": 133,
@@ -707,7 +706,7 @@
           },
           {
             "result": {
-              "duration": 1226000000,
+              "duration": 1232000000,
               "status": "passed"
             },
             "line": 135,
@@ -759,7 +758,7 @@
           },
           {
             "result": {
-              "duration": 12000000,
+              "duration": 20000000,
               "status": "passed"
             },
             "line": 138,
@@ -777,7 +776,7 @@
           },
           {
             "result": {
-              "duration": 12000000,
+              "duration": 20000000,
               "status": "passed"
             },
             "line": 139,
@@ -795,7 +794,7 @@
           },
           {
             "result": {
-              "duration": 897000000,
+              "duration": 1181000000,
               "status": "passed"
             },
             "line": 140,
@@ -847,7 +846,7 @@
           },
           {
             "result": {
-              "duration": 1032000000,
+              "duration": 968000000,
               "status": "passed"
             },
             "line": 143,
@@ -911,9 +910,9 @@
         ]
       }
     ],
-    "name": "Test Add and Delete place of google map",
+    "name": "Tests for Pet Module",
     "description": "",
-    "id": "test-add-and-delete-place-of-google-map",
+    "id": "tests-for-pet-module",
     "keyword": "Feature",
     "uri": "file:src/test/java/api/features/Pet_Operations.feature",
     "tags": [

@@ -1,5 +1,5 @@
 @Order_Operations
-Feature: Test Add and Delete place of google map
+Feature: Test for Store Module
 
 	@Create_Order
 	Scenario Outline: Create Pet Order

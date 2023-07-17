@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="33.418" tests="2" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="41.235" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\hp\AppData\Local\Temp\surefire5295987369249155335\surefirebooter-20230717091631659_3.jar C:\Users\hp\AppData\Local\Temp\surefire5295987369249155335 2023-07-17T09-16-31_427-jvmRun1 surefire-20230717091631659_1tmp surefire_0-20230717091631659_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\hp\AppData\Local\Temp\surefire8972543076465339052\surefirebooter-20230717145605543_3.jar C:\Users\hp\AppData\Local\Temp\surefire8972543076465339052 2023-07-17T14-56-04_861-jvmRun1 surefire-20230717145605543_1tmp surefire_0-20230717145605543_2tmp"/>
     <property name="surefire.test.class.path" value="E:\apiAutomation\restAssuredProject\target\test-classes;E:\apiAutomation\restAssuredProject\target\classes;C:\Users\hp\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\hp\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-java\6.6.0\cucumber-java-6.6.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-core\6.6.0\cucumber-core-6.6.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-gherkin\6.6.0\cucumber-gherkin-6.6.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-gherkin-messages\6.6.0\cucumber-gherkin-messages-6.6.0.jar;C:\Users\hp\.m2\repository\io\cucumber\messages\13.0.1\messages-13.0.1.jar;C:\Users\hp\.m2\repository\io\cucumber\tag-expressions\3.0.0\tag-expressions-3.0.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-expressions\10.3.0\cucumber-expressions-10.3.0.jar;C:\Users\hp\.m2\repository\io\cucumber\datatable\3.4.0\datatable-3.4.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-plugin\6.6.0\cucumber-plugin-6.6.0.jar;C:\Users\hp\.m2\repository\io\cucumber\docstring\6.6.0\docstring-6.6.0.jar;C:\Users\hp\.m2\repository\io\cucumber\html-formatter\9.0.0\html-formatter-9.0.0.jar;C:\Users\hp\.m2\repository\io\cucumber\create-meta\2.0.1\create-meta-2.0.1.jar;C:\Users\hp\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\hp\.m2\repository\io\cucumber\cucumber-junit\6.6.0\cucumber-junit-6.6.0.jar;C:\Users\hp\.m2\repository\io\rest-assured\rest-assured\5.1.1\rest-assured-5.1.1.jar;C:\Users\hp\.m2\repository\org\apache\groovy\groovy\4.0.1\groovy-4.0.1.jar;C:\Users\hp\.m2\repository\org\apache\groovy\groovy-xml\4.0.1\groovy-xml-4.0.1.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\hp\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\hp\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\hp\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\hp\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\hp\.m2\repository\io\rest-assured\xml-path\5.1.1\xml-path-5.1.1.jar;C:\Users\hp\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\hp\.m2\repository\io\rest-assured\json-path\5.1.1\json-path-5.1.1.jar;C:\Users\hp\.m2\repository\org\apache\groovy\groovy-json\4.0.1\groovy-json-4.0.1.jar;C:\Users\hp\.m2\repository\io\rest-assured\rest-assured-common\5.1.1\rest-assured-common-5.1.1.jar;C:\Users\hp\.m2\repository\io\rest-assured\json-schema-validator\5.1.1\json-schema-validator-5.1.1.jar;C:\Users\hp\.m2\repository\com\github\java-json-tools\json-schema-validator\2.2.14\json-schema-validator-2.2.14.jar;C:\Users\hp\.m2\repository\com\google\guava\guava\28.2-android\guava-28.2-android.jar;C:\Users\hp\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\hp\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\hp\.m2\repository\org\checkerframework\checker-compat-qual\2.5.5\checker-compat-qual-2.5.5.jar;C:\Users\hp\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\hp\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\hp\.m2\repository\com\github\java-json-tools\jackson-coreutils-equivalence\1.0\jackson-coreutils-equivalence-1.0.jar;C:\Users\hp\.m2\repository\com\github\java-json-tools\jackson-coreutils\2.0\jackson-coreutils-2.0.jar;C:\Users\hp\.m2\repository\com\github\java-json-tools\msg-simple\1.2\msg-simple-1.2.jar;C:\Users\hp\.m2\repository\com\github\java-json-tools\btf\1.3\btf-1.3.jar;C:\Users\hp\.m2\repository\com\github\java-json-tools\json-schema-core\1.2.14\json-schema-core-1.2.14.jar;C:\Users\hp\.m2\repository\com\github\java-json-tools\uri-template\0.10\uri-template-0.10.jar;C:\Users\hp\.m2\repository\org\mozilla\rhino\1.7.7.2\rhino-1.7.7.2.jar;C:\Users\hp\.m2\repository\com\sun\mail\mailapi\1.6.2\mailapi-1.6.2.jar;C:\Users\hp\.m2\repository\joda-time\joda-time\2.10.5\joda-time-2.10.5.jar;C:\Users\hp\.m2\repository\com\googlecode\libphonenumber\libphonenumber\8.11.1\libphonenumber-8.11.1.jar;C:\Users\hp\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\hp\.m2\repository\net\sf\jopt-simple\jopt-simple\5.0.4\jopt-simple-5.0.4.jar;C:\Users\hp\.m2\repository\org\json\json\20220320\json-20220320.jar;C:\Users\hp\.m2\repository\org\testng\testng\7.4.0\testng-7.4.0.jar;C:\Users\hp\.m2\repository\com\beust\jcommander\1.78\jcommander-1.78.jar;C:\Users\hp\.m2\repository\org\webjars\jquery\3.5.1\jquery-3.5.1.jar;C:\Users\hp\.m2\repository\com\github\scribejava\scribejava-apis\8.3.1\scribejava-apis-8.3.1.jar;C:\Users\hp\.m2\repository\com\github\scribejava\scribejava-core\8.3.1\scribejava-core-8.3.1.jar;C:\Users\hp\.m2\repository\com\github\scribejava\scribejava-java8\8.3.1\scribejava-java8-8.3.1.jar;C:\Users\hp\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.3\jackson-databind-2.12.3.jar;C:\Users\hp\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.3\jackson-annotations-2.12.3.jar;C:\Users\hp\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\hp\.m2\repository\com\aventstack\extentreports\5.0.9\extentreports-5.0.9.jar;C:\Users\hp\.m2\repository\io\reactivex\rxjava3\rxjava\3.0.4\rxjava-3.0.4.jar;C:\Users\hp\.m2\repository\org\reactivestreams\reactive-streams\1.0.3\reactive-streams-1.0.3.jar;C:\Users\hp\.m2\repository\org\freemarker\freemarker\2.3.30\freemarker-2.3.30.jar;C:\Users\hp\.m2\repository\org\projectlombok\lombok\1.18.12\lombok-1.18.12.jar;C:\Users\hp\.m2\repository\com\google\code\gson\gson\2.8.6\gson-2.8.6.jar;C:\Users\hp\.m2\repository\org\apache\poi\poi\5.2.2\poi-5.2.2.jar;C:\Users\hp\.m2\repository\commons-codec\commons-codec\1.15\commons-codec-1.15.jar;C:\Users\hp\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\hp\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\hp\.m2\repository\commons-io\commons-io\2.11.0\commons-io-2.11.0.jar;C:\Users\hp\.m2\repository\com\zaxxer\SparseBitSet\1.2\SparseBitSet-1.2.jar;C:\Users\hp\.m2\repository\org\apache\logging\log4j\log4j-api\2.17.2\log4j-api-2.17.2.jar;C:\Users\hp\.m2\repository\org\apache\poi\poi-ooxml\5.2.2\poi-ooxml-5.2.2.jar;C:\Users\hp\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.2\poi-ooxml-lite-5.2.2.jar;C:\Users\hp\.m2\repository\org\apache\xmlbeans\xmlbeans\5.0.3\xmlbeans-5.0.3.jar;C:\Users\hp\.m2\repository\xml-apis\xml-apis\1.4.01\xml-apis-1.4.01.jar;C:\Users\hp\.m2\repository\org\apache\commons\commons-compress\1.21\commons-compress-1.21.jar;C:\Users\hp\.m2\repository\com\github\virtuald\curvesapi\1.07\curvesapi-1.07.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\hp"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\hp\AppData\Local\Temp\surefire5295987369249155335\surefirebooter-20230717091631659_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\hp\AppData\Local\Temp\surefire8972543076465339052\surefirebooter-20230717145605543_3.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_221\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_221\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_221\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -60,9 +60,9 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testOrder" classname="api.tests.OrderTests" time="7.105">
+  <testcase name="testOrder" classname="api.tests.OrderTests" time="7.845">
     <system-out><![CDATA[HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:36 GMT
+Date: Mon, 17 Jul 2023 12:56:13 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -79,7 +79,7 @@ Server: Jetty(9.2.9.v20150224)
     "complete": true
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:37 GMT
+Date: Mon, 17 Jul 2023 12:56:14 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -96,7 +96,7 @@ Server: Jetty(9.2.9.v20150224)
     "complete": true
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:38 GMT
+Date: Mon, 17 Jul 2023 12:56:15 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -111,7 +111,7 @@ Server: Jetty(9.2.9.v20150224)
     "message": "15"
 }
 HTTP/1.1 404 Not Found
-Date: Mon, 17 Jul 2023 07:16:39 GMT
+Date: Mon, 17 Jul 2023 12:56:16 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -126,7 +126,7 @@ Server: Jetty(9.2.9.v20150224)
     "message": "Order not found"
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:40 GMT
+Date: Mon, 17 Jul 2023 12:56:17 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -136,18 +136,20 @@ Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 Server: Jetty(9.2.9.v20150224)
 
 {
-    "sold": 2,
-    "string": 788,
-    "pending": 7,
-    "available": 179,
-    "sdet doggie": 1,
-    "peric": 4
+    "sold": 3,
+    "string": 684,
+    "unavailable": 4,
+    "pending": 1,
+    "available": 230,
+    "Not Available": 3,
+    "dead": 1,
+    "peric": 1
 }
 ]]></system-out>
   </testcase>
-  <testcase name="testPet" classname="api.tests.PetTests" time="9.406">
+  <testcase name="testPet" classname="api.tests.PetTests" time="12.479">
     <system-out><![CDATA[HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:41 GMT
+Date: Mon, 17 Jul 2023 12:56:19 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -175,7 +177,7 @@ Server: Jetty(9.2.9.v20150224)
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:42 GMT
+Date: Mon, 17 Jul 2023 12:56:20 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -203,7 +205,7 @@ Server: Jetty(9.2.9.v20150224)
     "status": "available"
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:43 GMT
+Date: Mon, 17 Jul 2023 12:56:21 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -230,7 +232,7 @@ Server: Jetty(9.2.9.v20150224)
     "status": "pending"
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:43 GMT
+Date: Mon, 17 Jul 2023 12:56:22 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -257,7 +259,7 @@ Server: Jetty(9.2.9.v20150224)
     "status": "pending"
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:44 GMT
+Date: Mon, 17 Jul 2023 12:56:23 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -272,7 +274,7 @@ Server: Jetty(9.2.9.v20150224)
     "message": "1623"
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:45 GMT
+Date: Mon, 17 Jul 2023 12:56:24 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -282,29 +284,6 @@ Access-Control-Allow-Headers: Content-Type, api_key, Authorization
 Server: Jetty(9.2.9.v20150224)
 
 [
-    {
-        "id": 74408294,
-        "category": {
-            "id": 70278030,
-            "name": "in adipisicing"
-        },
-        "name": "doggie",
-        "photoUrls": [
-            "nostrud sunt eu occaecat elit",
-            "esse aute non magna"
-        ],
-        "tags": [
-            {
-                "id": 81618844,
-                "name": "id aliquip"
-            },
-            {
-                "id": -96817599,
-                "name": "ut elit esse"
-            }
-        ],
-        "status": "sold"
-    },
     {
         "id": 68,
         "category": {
@@ -320,6 +299,34 @@ Server: Jetty(9.2.9.v20150224)
                 "id": 68,
                 "name": "bagworm"
             }
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 17,
+        "category": {
+            "id": 0
+        },
+        "name": "crunch",
+        "photoUrls": [
+            
+        ],
+        "tags": [
+            
+        ],
+        "status": "sold"
+    },
+    {
+        "id": 347,
+        "category": {
+            "id": 0
+        },
+        "name": "crunch",
+        "photoUrls": [
+            
+        ],
+        "tags": [
+            
         ],
         "status": "sold"
     },
@@ -342,7 +349,7 @@ Server: Jetty(9.2.9.v20150224)
     }
 ]
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:47 GMT
+Date: Mon, 17 Jul 2023 12:56:26 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -369,7 +376,7 @@ Server: Jetty(9.2.9.v20150224)
     "status": "sold"
 }
 HTTP/1.1 200 OK
-Date: Mon, 17 Jul 2023 07:16:48 GMT
+Date: Mon, 17 Jul 2023 12:56:28 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive
@@ -384,7 +391,7 @@ Server: Jetty(9.2.9.v20150224)
     "message": "1623"
 }
 HTTP/1.1 404 Not Found
-Date: Mon, 17 Jul 2023 07:16:49 GMT
+Date: Mon, 17 Jul 2023 12:56:30 GMT
 Content-Type: application/json
 Transfer-Encoding: chunked
 Connection: keep-alive

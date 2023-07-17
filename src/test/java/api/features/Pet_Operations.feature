@@ -1,5 +1,5 @@
 @Pet_Operations
-Feature: Test Add and Delete place of google map
+Feature: Tests for Pet Module
 
 	@Get_Pet_By_Status_DropDown
 	Scenario Outline: Get Pet By Status
