@@ -22,7 +22,7 @@ public class PetSteps extends CommonSteps {
     @Given("User fetches the pet details by Pet Status {string}")
     public void userFetchesThePetDetailsByPetStatus(String arg0) {
 
-        response = PetEndPoints.getPetByStatus("sold");
+        response = PetEndPoints.getPetByStatus(arg0);
         response.then().log().all();
     }
 

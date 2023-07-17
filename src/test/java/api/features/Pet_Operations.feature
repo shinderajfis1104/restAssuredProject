@@ -12,6 +12,7 @@ Feature: Tests for Pet Module
 			| sold | 200  | OK | Rio_Jagtap |
 			| available | 200  | OK | doggie |
 			| pending | 200  | OK | TestPet1 |
+			|  | 200  | OK |  |
 
 
 	@Get_Pet_By_Id
@@ -26,6 +27,7 @@ Feature: Tests for Pet Module
 			| 7579402596501828000 | 200  | OK | Rio_Jagtap |
 			| 120 | 404  | Not Found | doggie |
 			| a24 | 404  | Not Found | TestPet1 |
+			|  | 405  | Not Allowed | TestPet1 |
 
 
 	@Update_Pet_By_Form
@@ -45,6 +47,7 @@ Feature: Tests for Pet Module
 			|23 |Rahul|available| 200  | OK |
 			| 260 |RahulP|| 404  | Not Found |
 			|23w |Rahul|available| 404  | Not Found |
+			#| |Rahul|available| 415  | Unsupported Media Type |
 
 	@Create_Pet
 	Scenario Outline: Create Pet
@@ -61,6 +64,7 @@ Feature: Tests for Pet Module
 			| 19 ||pending| 200  | OK |ABCDEFG                    |
 			| 23 |RahulP|| 200  | OK |NICE|
 			| 9223372036854775807 |RahulM|| 200  | OK |NICE|
+			|  |RahulM|| 200  | OK |NICE|
 
 
 
@@ -74,6 +78,7 @@ Feature: Tests for Pet Module
 			| Id|PetName|PetStatus| StatusCode |StatusLine|PhotoURL|
 			|23q |Rahul|available| 500  | Server Error |PQR|
 			| 9223372036854775808 |RahulM|| 500  | Server Error |NICE|
+			#|  |RahulM|| 500  | Server Error |NICE|
 
 
 	@Update_Pet
@@ -90,7 +95,7 @@ Feature: Tests for Pet Module
 			| 24 |RahulB|sold| 200  | OK                  |ABCDEF|
 			| 19 |RahulW|| 200  | OK |ABCDEFG                    |
 			| 23 ||pending| 200  | OK |NICE|
-
+			| |Rahul|available| 200  | OK |XHG|
 
 	@Update_Pet_Invalid
 	Scenario Outline: Update Pet Invalid
@@ -102,6 +107,7 @@ Feature: Tests for Pet Module
 			| Id|PetName|PetStatus| StatusCode |StatusLine|PhotoURL|
 			|23q |Rahul|available| 500  | Server Error |PQR|
 
+
 	@Delete_Pet
 	Scenario Outline: Delete Pet
 		Given User deletes the pet by Id "<Id>"
@@ -112,6 +118,7 @@ Feature: Tests for Pet Module
 			|23| 200  | OK |
 			|219| 404  | Not Found |
 			|219a| 404  | Not Found |
+			|| 405  | Not Allowed  |
 
 	@CRUD_Pet @Smoke
 	Scenario Outline: CRUD Pet
