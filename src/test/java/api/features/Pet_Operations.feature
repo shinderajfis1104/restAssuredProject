@@ -82,7 +82,7 @@ Feature: Tests for Pet Module
 
 
 	@Update_Pet
-	Scenario Outline: Create Pet
+	Scenario Outline: Update Pet
 		Given User updates the pet by with Pet Id "<Id>" and Pet Name "<PetName>" and Pet Status "<PetStatus>" and Photo URL "<PhotoURL>"
 		Then Status code is <StatusCode>
 		And Status in response body is "<StatusLine>"
